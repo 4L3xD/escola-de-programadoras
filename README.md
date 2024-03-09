@@ -3,7 +3,7 @@ Este é um repositório do projeto [Escola de Programadoras](https://www.escolad
 Visite nosso [**material didático**](https://escola-de-programadoras.notion.site/cb600e42a27647ecb0c36c0571ea51e0) para conhecer os tópicos de aprendizagem do programa.
 
 # Sobre a Escola de Programadoras
-Em colaboração com o Instituto Angelim e o CICBEU Idiomas desenvolvi o projeto Escola de Programadoras, financiado pela Embaixada e Consulados dos EUA no Brasil.
+Em colaboração com o Instituto Angelim e o CICBEU Idiomas desenvolvi o projeto Escola de Programadoras, financiado pela 🇺🇸 Embaixada e Consulados dos EUA no Brasil.🇧🇷
 Este é um projeto social com o objetivo de ampliar o acesso à tecnologia para feminilidades no ensino público, possilitando novas perspectivas de carreira para mulheres e meninas.
 
 O projeto visa o desenvolvimento técnico na área de Computação, com ênfase no desenvolvimento de software a partir de aulas práticas de Desenvolvimento Web ministradas utilizando:
