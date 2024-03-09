@@ -3,13 +3,13 @@ import time
 import telepot
 from telepot.loop import MessageLoop
 import env
-from nlp import ia
+from nlp import gemini
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(content_type, chat_type, chat_id)
 
-    ai_msg = ia(msg['text'])
+    ai_msg = gemini(msg['text'])
     if content_type == 'text':
         bot.sendMessage(chat_id, ai_msg)
 
