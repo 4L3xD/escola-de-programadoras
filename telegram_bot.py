@@ -2,7 +2,7 @@ import sys
 import time
 import telepot
 from telepot.loop import MessageLoop
-import env
+from env import TELEGRAM_TOKEN
 from nlp import gemini
 
 def handle(msg):
@@ -15,7 +15,7 @@ def handle(msg):
 
 
 #TOKEN = sys.argv[1]  # get token from command-line
-TOKEN = env.token
+TOKEN = TELEGRAM_TOKEN
 
 bot = telepot.Bot(TOKEN)
 MessageLoop(bot, handle).run_as_thread()
