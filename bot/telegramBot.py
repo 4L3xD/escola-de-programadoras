@@ -1,5 +1,6 @@
 # import sys
 import time
+# https://telepot.readthedocs.io/en/latest/
 import telepot
 from telepot.loop import MessageLoop
 from geminiAI import Gemini
