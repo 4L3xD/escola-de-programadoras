@@ -1,7 +1,7 @@
 import google.generativeai as genai
 from PIL import Image
 from downloadImage import ImageProcessing
-from env import GOOGLE_API_KEY
+from env import GOOGLE_API_KEY, PATH
 
 class Gemini():
     def __init__(self, user_msg):
@@ -27,7 +27,7 @@ class Gemini():
         img_proc = ImageProcessing(img_url)
         img_name = img_proc.download_img()
         
-        img_path = f'./bot/img/{img_name}'
+        img_path = f'{PATH}/{img_name}'
         img = Image.open(img_path)
         # img.show()
 
