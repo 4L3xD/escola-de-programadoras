@@ -7,21 +7,35 @@ from downloadImage import ImageProcessing
 # https://aistudio.google.com/app/apikey
 from env import GOOGLE_API_KEY
 
-class GeminiVision():
-    def __init__(self, url):
-        self.img_url = url
+class Gemini():
+    def __init__(self, user_msg):
+        self.user_msg = user_msg
         genai.configure(api_key=GOOGLE_API_KEY)
 
-    def ai(self):
-        img_name = ImageProcessing(self.img_url).download_img()
+    def nlp(self):
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                print(m.name)
+
+        model = genai.GenerativeModel('gemini-pro')
+        #response = model.generate_content("What is the meaning of life?")
+        #print(response.text)
+        response = model.generate_content(self.user_msg)
+        ai_msg = response.text
+
+        # Speech Analysis
+        # print(response.prompt_feedback)
+        return ai_msg
+
+    def vision(self):
+        img_url = self.user_msg
+        img_name = ImageProcessing(img_url).download_img()
         
         img = Image.open(f'./bot/img/{img_name}')
         # img.show()
 
         model = genai.GenerativeModel('gemini-pro-vision')
         response = model.generate_content(img)
-
-        return response.text
 
         # response = model.generate_content(
         #         [
@@ -32,6 +46,7 @@ class GeminiVision():
         #     )
         # response.resolve()
         # print(response.text)
+        return response.text
 
 # Execução do script
 # url = "https://tm.ibxk.com.br/2023/03/09/09075758840013.jpg"

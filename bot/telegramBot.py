@@ -2,8 +2,7 @@
 import time
 import telepot
 from telepot.loop import MessageLoop
-from nlp import GeminiNLP
-from vision import GeminiVision
+from geminiAI import Gemini
 from env import TELEGRAM_TOKEN
 
 def handle(msg):
@@ -12,10 +11,10 @@ def handle(msg):
 
     if content_type == 'text':
         if 'https://' in msg['text']:
-            ai_msg = GeminiVision(msg['text']).ai()
+            ai_msg = Gemini(msg['text']).vision()
             bot.sendMessage(chat_id, ai_msg)
         else:
-            ai_msg = GeminiNLP(msg['text']).ai()
+            ai_msg = Gemini(msg['text']).nlp()
             bot.sendMessage(chat_id, ai_msg)
 
 #TOKEN = sys.argv[1]  # get token from command-line
