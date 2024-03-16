@@ -7,7 +7,7 @@ from downloadImage import ImageProcessing
 # https://aistudio.google.com/app/apikey
 from env import GOOGLE_API_KEY
 
-class Gemini():
+class GeminiVision():
     def __init__(self, url):
         self.img_url = url
         genai.configure(api_key=GOOGLE_API_KEY)
