@@ -18,3 +18,14 @@ O projeto consiste em duas fases:
 - Instrutoras difundindo a aprendizagem através do **Ensino de Programação em escolas públicas**, carga-horária: 12 horas.
 
 Como idealizadora, coordenadora e instrutora da turma piloto, atuei no desenvolvimento da estrutura de execução do projeto, definição de especificações técnicas dos equipamentos de hardware e software, análise e definição do público-alvo, processo seletivo, cronograma, desenvolvimento de material didático e liderança do ensino e aprendizagem.
+
+___
+# Para executar o projeto
+```
+pip install requests\
+pip install -q -U google-generativeai\
+python3 -m pip install --upgrade Pillow
+pip install telepot
+```
+
+https://telepot.readthedocs.io/en/latest/

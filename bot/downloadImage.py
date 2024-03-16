@@ -25,7 +25,3 @@ class ImageProcessing():
             print("Falha ao fazer o download: ", response.status_code)
 
         return self.img_name
-
-# Execução do script
-# url = "https://tm.ibxk.com.br/2023/03/09/09075758840013.jpg"
-# print(ImageProcessing(url).download_img())

@@ -21,11 +21,10 @@ class Gemini():
         #response = model.generate_content("What is the meaning of life?")
         #print(response.text)
         response = model.generate_content(self.user_msg)
-        ai_msg = response.text
 
         # Speech Analysis
         # print(response.prompt_feedback)
-        return ai_msg
+        return response.text
 
     def vision(self):
         img_url = self.user_msg
@@ -47,7 +46,3 @@ class Gemini():
         # response.resolve()
         # print(response.text)
         return response.text
-
-# Execução do script
-# url = "https://tm.ibxk.com.br/2023/03/09/09075758840013.jpg"
-# print(Gemini(url).ai())
